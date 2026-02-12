@@ -38,6 +38,21 @@
         <section id="main" class="wrapper">
             <article class="inner">
                 <h1 class="major">NIRS-X & fNIRS2MW Audio n-back dataset</h1>
+                <p>Welcome to the Tufts fNIRS to Mental Workload (fNIRS2MW) audio n-back open-access dataset!<br><br>
+                
+                Using this dataset, we can train and evaluate machine learning classifiers that consume a short window (30 seconds) of
+                multivariate fNIRS recordings and predict the mental workload intensity of the user during that interval.
+                <br><br>
+                In the previous fNIRS2MW dataset link to it We have collected fNIRS brain activity recordings from 68 partipants during
+                a series of controlled visual n-back experimental tasks designed to induce working memory workloads of varying relative
+                intensity.
+                <br><br>
+                We collect and present a novel audio $n$-back fNIRS mental workload dataset with 53 users, expanding upon the
+                previously-released visual $n$-back dataset.add link to it here
+                <br><br>
+                This work lends credence to our underlying claim that we are truly measuring short-term memory in a general way, rather
+                than some superficial or perceptual phenomenon tied to the presentation modality. It thus supports the viability of
+                transferring knowledge between the visual and audio tasks, not just across users.</p>
                 <nav class="quick-links">
                     <h3>Quick Links</h3>
                     <ul>
@@ -230,7 +245,24 @@
                         </p>
                     </blockquote>
                     <p>Please cite our papers if you find these datasets (fNIRS2MW-Visual and fNIRS2MW-Audio) useful:</p>
-                            
+                    <blockquote>
+                        Wang, L., Huang, Z., Zhou, Z., McKeon, D., Blaney, G., Hughes, M. C., & Jacob, R. J. K. (2021). Taming fNIRS-based
+                        BCI
+                        input for better calibration and broader use. Proceedings of the 34th Annual ACM Symposium on User Interface
+                        Software
+                        and Technology, 179-197.<br><br>
+                        Huang, Z., Wang, L., Blaney, G., Slaughter, C., McKeon, D., Zhou, Z., Jacob, R. J. K., & Hughes, M. C. (2021). The
+                        Tufts
+                        fNIRS Mental Workload Dataset & Benchmark for Brain-Computer Interfaces that Generalize. Proceedings of the Neural
+                        Information Processing Systems (NeurIPS) Track on Datasets and Benchmarks.
+                        https://openreview.net/pdf?id=QzNHE7QHhut<br><br>
+                        Wang, L., Zhang, J., Liu, J., McKeon, D., Brizan, D. G., Blaney, G., & Jacob, R. J. K. (2024). Empower real-world
+                        BCIs
+                        with NIRS-X: An adaptive learning framework that harnesses unlabeled brain signals. Proceedings of the 37th Annual
+                        ACM
+                        Symposium on User Interface Software and Technology, 1-16.
+                    
+                    </blockquote>
                 </Section>
                 <!----------------------------------------Data Collection Procedures Section------------------------------------------------------>
                 <Section id="four" class="wrapper">
@@ -254,29 +286,19 @@
                         dataset was approved
                         for public release (STUDY00000959). Each participant gave informed written consent, and was
                         compensated $20 US.</p>
-                    <p>Because collection occurred during the COVID-19 pandemic in early 2021, we also got approval from
-                        the Tufts
-                        Integrative Safety Committee (ISC). We followed required sanitation and social distancing
-                        practices: experimenters
-                        used personal protective equipment and disinfected the fNIRS probe for each subject.</p>
+                        <p>Because collection occurred during the COVID-19 pandemic in 2021 and 2022, we also got approval from the Tufts
+                            Integrative Safety Committee (ISC). We followed required sanitation and social distancing practices: experimenters
+                            used personal protective equipment and disinfected the fNIRS probe for each subject.</p>
                     <hr class="custom-line">
                     <h4 id="task-description"><a href="#task-description" class="header-anchor">#</a> Task Description
                     </h4>
                     <ul>
-                        <li>Each participant completed <code style="background-color: rgb(210, 201, 201);">16</code>
-                            blocks of n-back
-                            trails
-                            (<em>0→1→2→3→1→2→3→0→2→3→0→1→3→0→1→2</em>).
+                        <li>Each participant completed <code style="background-color: rgb(210, 201, 201);">16</code> blocks of n-back trails (<em>0→1→2→3→1→2→3→0→2→3→0→1→3→0→1→2</em>).
                         </li>
                         <li>Each block is composed of:
                             <ul>
-                                <li><code style="background-color: rgb(210, 201, 201);">40</code> trails ( display for
-                                    <code style="background-color: rgb(210, 201, 201);">0.5</code> seconds, hidden for
-                                    <code style="background-color: rgb(210, 201, 201);">1.5</code> seconds).
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+                                <li><code style="background-color: rgb(210, 201, 201);">40</code> trails ( <span style="color: red;"><em>audio length of each number is <code style="background-color: rgb(210, 201, 201);">0.5</code>
+                                            seconds, then pause for <code style="background-color: rgb(210, 201, 201);">1.5</code> seconds</em></span> ).</li></ul></li></ul>
                     <em>Details of task sessions is as below:</em>
                     <hr class="custom-line">
                     <img src="images/code_and_datasets_images/fNIRS2MW/task-flowchart.png" width="70%" height="40%">
@@ -290,80 +312,61 @@
                     <em>Sample scripts for N-back task video are as below:</em>
                     <br><br>
                     <blockquote>
-                        Today you will be completing a series of n-back tasks. You will be presented with many
-                        numbers, one after
-                        another. Some of these numbers will be targets. A number is a target if it is identical to
-                        the one shown n steps
-                        previously.<br>
-                        Here is an example of a 2-back task. In this case, n = 2. The highlighted 8 is a target
-                        number, since the number
-                        2 steps back is also 8.<br>
-                        Your job will be to press the left arrow key each time you see one of these target numbers.
-                        If the number shown
-                        is not a target number, you should press the right arrow key.<br>
+                        Today you will be completing a series of n-back tasks. You will be presented with many numbers, one after
+                            another. Some of these numbers will be targets. A number is a target if it is identical to the one shown n steps
+                            previously.<br>
+                        Here is an example of a 2-back task. In this case, n = 2. The highlighted 8 is a target number, since the number
+                            2 steps back is also 8.<br>
+                        Your job will be to press the left arrow key each time you <span style="color: red;"><em>hear</em></span> one of
+                            these target numbers. If the number <span style="color: red;"><em>played</em></span> is not a target number, you
+                            should press the right arrow key.<br>
                     </blockquote>
                     <hr class="custom-line">
                     <blockquote>
                         Let’s view an example of a 0-back task.<br>
-                        At the beginning of each task, you will hear a few beeps which indicate the start of the
-                        task.<br>
-                        The current type of n-back task can be found at the top of the task window. In this example,
-                        n = 0. For the
-                        purposes of this demo only, the stack of numbers already shown is included beneath the task
-                        window.<br>
-                        When n = 0, every number is a target, since every number is identical to the number 0 steps
-                        back. That is, every
-                        number is the same as itself. For 0-back, the participant presses the left arrow key after
-                        each number appears,
-                        and never presses the right arrow key.<br>
+                        At the beginning of each task, you will hear a few beeps which indicate the start of the task.<br>
+                        The current type of n-back task can be found at the top of the task window. In this example, n = 0. For the
+                            purposes of this demo only, the stack of numbers already shown is included beneath the task window.<br>
+                        When n = 0, every number is a target, since every number is identical to the number 0 steps back. That is, every
+                            number is the same as itself. For 0-back, the participant presses the left arrow key after each number appears,
+                            and never presses the right arrow key.<br>
                     </blockquote>
                     <hr class="custom-line">
                     <blockquote>
                         Now let’s view an example of a 1-back task.<br>
-                        The participant should press the right arrow key for all non-target numbers. When n = 1, a
-                        number is only a<br>
-                        target if it is identical to the number 1 step back. Once the participant identifies a
-                        target number, they
-                        should press the left arrow key instead.<br>
-                        For example, this 4 is a target number because the previous number was also 4. The
-                        participant should press the
-                        left arrow key, and then continue pressing the right arrow key until they see the next
-                        target number.<br>
-                        Here is another target number. The number 1-step back was also 2, so the participant should
-                        press the left arrow
-                        key.<br>
-                        During today’s experiment, the stack of already shown numbers will not be visible to you. It
-                        is your job to
-                        remember the numbers that were n-steps back so that you are able to identify the correct
-                        target numbers.<br>
+                        The participant should press the right arrow key for all non-target numbers. When n = 1, a number is only a
+                            target if it is identical to the number 1 step back. Once the participant identifies a target number, they
+                            should press the left arrow key instead.<br>
+                        For example, this 4 is a target number because the previous number was also 4. The participant should press the
+                            left arrow key, and then continue pressing the right arrow key until they <span
+                                style="color: red;"><em>hear</em></span> the next target number.<br>
+                        Here is another target number. The number 1-step back was also 2, so the participant should press the left arrow
+                            key.<br>
+                        During today’s experiment, the stack of already <span style="color: red;"><em>played</em></span> numbers will not
+                            be available to you. It is your job to remember the numbers that were n-steps back so that you are able to
+                            identify the correct target numbers.
                     </blockquote>
                     <hr class="custom-line">
                     <blockquote>
-                        There will be 16 rounds in total. During each round, you will complete an n-bask task, where
-                        n is either 0, 1, 2,
-                        or 3.<br>
-                        Before each task, there will be instructions reminding you how to find the target numbers for
-                        the current n.
-                        During the task, you will be shown 40 numbers. Each time you see a target number, you should
-                        press the left
-                        arrow key. For all non-target numbers, you should press the right arrow key.<br>
-                        After each task, you will complete a survey. Once you have completed the survey, you will be
-                        able to rest for 20
-                        seconds.<br>
+                        There will be 16 rounds in total. During each round, you will complete an n-bask task, where n is either 0, 1, 2,
+                            or 3.<br>
+                        Before each task, there will be instructions reminding you how to find the target numbers for the current n.
+                            During the task, you will <span style="color: red;"><em>hear total 40 numbers audio recordings</em></span>. Each
+                            time you <span style="color: red;"><em>hear</em></span> a target number, you should press the left arrow key.
+                            For all non-target numbers, you should press the right arrow key.<br>
+                        After each task, you will complete a survey. Once you have completed the survey, you will be able to rest for 20
+                            seconds.<br>
                         The experiment will take approximately 40 minutes.<br>
-                        After the entire experiment is finished, you will complete a short interview about your
-                        experience.<br>
-                        Please remain seated and do not talk or adjust the headband while completing the experiment.
-                        However, if you do
-                        feel uncomfortable at any point, let the operator know and they will stop the experiment.
-
+                        After the entire experiment is finished, you will complete a short interview about your experience.<br>
+                        Please remain seated and do not talk or adjust the headband while completing the experiment. However, if you do
+                            feel uncomfortable at any point, let the operator know and they will stop the experiment.<br>
                     </blockquote>
                     <hr class="custom-line">
 
                     <strong class="alt">Generel introduction</strong>:
                     Before each task, the system displayed a graphic depicting how to identify targets for the
                     current n, with
-                    voice-over.
+                    voice-over.<br>
                     <em>The graphic and sample scripts for 0-back are as below:</em><br>
                     <img src="images/code_and_datasets_images/fNIRS2MW/intro_0_back.png" width="40%" height="20%">
                     <blockquote>
@@ -389,122 +392,116 @@
                     </blockquote>
                     <hr class="custom-line">
                     <h3 id="data-structure"><a href="#data-structure" class="header-anchor">#</a> Data Structure</h3>
-                    Our released dataset includes (<a href="https://tufts.box.com/s/1e0831syu1evlmk9zx2pukpl3i32md6r"
-                        target="_blank" rel="noopener noreferrer">Link to fNIRS2MW dataset<span><svg
-                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
-                                viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
-                                <path fill="currentColor"
-                                    d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                                </path>
-                                <polygon fill="currentColor"
-                                    points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
-                                </polygon>
-                            </svg> <span class="sr-only">(opens new window)</span></span></a>):
-                    <ul>
-                        <li><strong class="alt">fNIRS measurements</strong> in <a
-                                href="https://tufts.box.com/s/9jwy67dw2b6emmslutxhmgihk92ivnf2" target="_blank"
-                                rel="noopener noreferrer">fNIRS_data<span><svg xmlns="http://www.w3.org/2000/svg"
-                                        aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100"
-                                        width="15" height="15" class="icon outbound">
-                                        <path fill="currentColor"
-                                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                                        </path>
-                                        <polygon fill="currentColor"
-                                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
-                                        </polygon>
-                                    </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
-                        <li><strong class="alt">Supplementary data</strong>:
-                            <ul>
-                                <li><strong class="alt">demographic and contextual information</strong> in <a
-                                        href="https://tufts.box.com/s/x2o6hny7kwudg58e1364gdogbvhnwq4f" target="_blank"
-                                        rel="noopener noreferrer">pre-experiment<span><svg
-                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                                                x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"
-                                                class="icon outbound">
-                                                <path fill="currentColor"
-                                                    d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                                                </path>
-                                                <polygon fill="currentColor"
-                                                    points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
-                                                </polygon>
-                                            </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
-                                <li><strong class="alt">Cognitive task performance</strong> in <a
-                                        href="https://tufts.box.com/s/gme0gsc6z9vj0v4dhchtqh04b4fpy8tm" target="_blank"
-                                        rel="noopener noreferrer">task_accuracy<span><svg
-                                                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                                                x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"
-                                                class="icon outbound">
-                                                <path fill="currentColor"
-                                                    d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                                                </path>
-                                                <polygon fill="currentColor"
-                                                    points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
-                                                </polygon>
-                                            </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
-                                <li><strong class="alt">experiment log</strong> in <a
-                                        href="https://tufts.box.com/s/9ruep9b6tpeymda9qrubq64oampfh9br" target="_blank"
-                                        rel="noopener noreferrer">log<span><svg xmlns="http://www.w3.org/2000/svg"
-                                                aria-hidden="true" focusable="false" x="0px" y="0px"
-                                                viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
-                                                <path fill="currentColor"
-                                                    d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                                                </path>
-                                                <polygon fill="currentColor"
-                                                    points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
-                                                </polygon>
-                                            </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
-                                <li><strong class="alt">post-experiment interview</strong> in <a
-                                        href="https://tufts.box.com/s/jrn9rvph8xugstuz9ixra1l2mpfqopdh" target="_blank"
-                                        rel="noopener noreferrer">interview<span><svg xmlns="http://www.w3.org/2000/svg"
-                                                aria-hidden="true" focusable="false" x="0px" y="0px"
-                                                viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
-                                                <path fill="currentColor"
-                                                    d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                                                </path>
-                                                <polygon fill="currentColor"
-                                                    points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
-                                                </polygon>
-                                            </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
-                                <li><strong class="alt">subjective workload</strong> in <a
-                                        href="https://tufts.box.com/s/c5y3m59wwwem0j792epjxhnq4uei5swq" target="_blank"
-                                        rel="noopener noreferrer">nasa-tlx<span><svg xmlns="http://www.w3.org/2000/svg"
-                                                aria-hidden="true" focusable="false" x="0px" y="0px"
-                                                viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
-                                                <path fill="currentColor"
-                                                    d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                                                </path>
-                                                <polygon fill="currentColor"
-                                                    points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
-                                                </polygon>
-                                            </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    Our released dataset includes (<a href="https://tufts.box.com/s/t87j27ha7b7spitmtcm5nbltfnld5ekh" target="_blank"
+                            rel="noopener noreferrer" style="color: #4DB3FF;">Link to fNIRS2MW audio n-back dataset<span><svg xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"
+                                    class="icon outbound">
+                                    <path fill="currentColor"
+                                        d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                    </path>
+                                    <polygon fill="currentColor"
+                                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                    </polygon>
+                                </svg> <span class="sr-only">(opens new window)</span></span></a>):
+                                <ul>
+                                    <li><strong class="alt">fNIRS measurements</strong> in <a href="https://tufts.box.com/s/fuv3eyw6fj2ixjxvffe4fqtk2qnkj3ee"
+                                            target="_blank" rel="noopener noreferrer">raw audio n-back fNIRS_data<span><svg
+                                                    xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                                                    viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
+                                                    <path fill="currentColor"
+                                                        d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                                    </path>
+                                                    <polygon fill="currentColor"
+                                                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                                    </polygon>
+                                                </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
+                                    <li><strong class="alt">Supplementary data</strong>:
+                                        <ul>
+                                            <li><strong class="alt">demographic and contextual information</strong> in <a
+                                                    href="https://tufts.box.com/s/d6dardj0a4xtfjk9iikwqsie7l3itnc1" target="_blank"
+                                                    rel="noopener noreferrer">pre-experiment<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                            aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15"
+                                                            height="15" class="icon outbound">
+                                                            <path fill="currentColor"
+                                                                d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                                            </path>
+                                                            <polygon fill="currentColor"
+                                                                points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                                            </polygon>
+                                                        </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
+                                            <li><strong class="alt">Cognitive task performance</strong> in <a
+                                                    href="https://tufts.box.com/s/t2ig0ur8paeled5vts9tntzzpoc4w2ln" target="_blank"
+                                                    rel="noopener noreferrer">task_accuracy<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                            aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15"
+                                                            height="15" class="icon outbound">
+                                                            <path fill="currentColor"
+                                                                d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                                            </path>
+                                                            <polygon fill="currentColor"
+                                                                points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                                            </polygon>
+                                                        </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
+                                            <li><strong class="alt">experiment log</strong> in <a href="https://tufts.box.com/s/ly12vf1eu5sn39ke580t6ej7ra0fps7v"
+                                                    target="_blank" rel="noopener noreferrer">log<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                            aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15"
+                                                            height="15" class="icon outbound">
+                                                            <path fill="currentColor"
+                                                                d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                                            </path>
+                                                            <polygon fill="currentColor"
+                                                                points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                                            </polygon>
+                                                        </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
+                                            <li><strong class="alt">post-experiment interview</strong> in <a
+                                                    href="https://tufts.box.com/s/r97bhtwp52lyx693ftstugn0wf2bmxgp" target="_blank"
+                                                    rel="noopener noreferrer">interview<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                            focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"
+                                                            class="icon outbound">
+                                                            <path fill="currentColor"
+                                                                d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                                            </path>
+                                                            <polygon fill="currentColor"
+                                                                points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                                            </polygon>
+                                                        </svg> <span class="sr-only">(opens new window)</span></span></a>;</li>
+                                            <li><strong class="alt">subjective workload</strong> in <a
+                                                    href="https://tufts.box.com/s/jdmy7rkkfvtm2xe53pv89sb3y3llja30" target="_blank"
+                                                    rel="noopener noreferrer">nasa-tlx<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                            focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15"
+                                                            class="icon outbound">
+                                                            <path fill="currentColor"
+                                                                d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                                            </path>
+                                                            <polygon fill="currentColor"
+                                                                points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                                            </polygon>
+                                                        </svg> <span class="sr-only">(opens new window)</span></span></a>;</li></ul></li></ul>
                     <div class="language- extra-class">
                         <pre class="language-text"><code style="background-color: #191a1a; color: whitesmoke; width: 70%;">
 ***************************************
-** fNIRS2MW dataset folder structure **
+** fNIRS2MW audio n-back dataset folder structure **
 ***************************************
-|- qualified_subjects_list.pdf            
-|- pre-experiment                              //
-|- experiment                                  //
-| |- log                                       //
-| |- task_accuracy                             //
-| |- fNIRS_data                                //
-| | |- raw_data                                //
-| | |- band_pass_filtered                      //
-| | | |- whole_data                            //
-| | | |- slide_window_data                     //
-| | | | |- size_02sec_10ts_stride_03ts
-| | | | |- size_05sec_25ts_stride_03ts
-| | | | |- size_10sec_50ts_stride_03ts
-| | | | |- size_20sec_100ts_stride_03ts
-| | | | |- size_30sec_150ts_stride_03ts
-| | | | |- size_40sec_200ts_stride_03ts
-|- post-experiment                             //
-| |- nasa-tlx                                  //
-| |- interview                                 //
-| |- * (all other folders)  
+|- qualified_subjects_list.pdf                    //
+|- pre-experiment                                 //
+|- experiment                                     //
+| |- log                                          //
+| |- task_accuracy                                //
+| |- raw_data                                     //
+| |- band_pass_filtered                           //
+| | |- whole_data                                 //
+| | |- bpf_size_10ts_stride_03ts                  //
+| | |- bpf_size_25ts_stride_03ts                  //
+| | |- bpf_size_50ts_stride_03ts                  //
+| | |- bpf_size_100ts_stride_03ts                 //
+| | |- bpf_size_150ts_stride_03ts                 //
+| | |- bpf_size_200ts_stride_03ts                 //
+| |- non_band_pass_filtered                       //
+| | |- whole_data                                 //
+| | |- size_150ts_stride_03ts                     //
+|- post-experiment                                //
+| |- nasa-tlx                                     //
+| |- interview                                    //
+| |- * (all other folders)                        //
                     </code></pre>
                     </div>
                     <hr class="custom-line">
@@ -512,11 +509,10 @@
                     We introduce and describe the data format of fNIRS data (raw and pre-processed) and supplementary
                     data as below:
                     <hr class="custom-line">
-                    <h4 id="fnirs-data"><a href="#fnirs-data" class="header-anchor">#</a> <a
-                            href="https://tufts.box.com/s/9jwy67dw2b6emmslutxhmgihk92ivnf2" target="_blank"
-                            rel="noopener noreferrer">fNIRS
-                            Data<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                                    x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
+                    <h4 id="experiment-data"><a href="#experiment-data" class="header-anchor">#</a> <a
+                            href="https://tufts.box.com/s/ydb0sfsyo0q2oxj9ll72ig22ivkay022" target="_blank"
+                            rel="noopener noreferrer">experiment Data<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                    focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
                                     <path fill="currentColor"
                                         d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
                                     </path>
@@ -524,13 +520,8 @@
                                         points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
                                     </polygon>
                                 </svg> <span class="sr-only">(opens new window)</span></span></a></h4>
-                    <p><code style="background-color: rgb(210, 201, 201);">68</code> participants were recruited, aged
-                        <code style="background-color: rgb(210, 201, 201);">18</code> to <code
-                            style="background-color: rgb(210, 201, 201);">44</code> years.
-                        <code style="background-color: rgb(210, 201, 201);">None</code> of the
-                        participants reported neurological, psychiatric, or other brain-related diseases that might
-                        affect the result.
-                    </p>
+                                <p><code style="background-color: rgb(210, 201, 201);">53</code> participants were recruited, aged <code style="background-color: rgb(210, 201, 201);">18</code> to <code style="background-color: rgb(210, 201, 201);">33</code> years. <code style="background-color: rgb(210, 201, 201);">None</code> of the
+                                    participants reported neurological, psychiatric, or other brain-related diseases that might affect the result.</p>
                     <hr class="custom-line">
                     <h4 id="raw-data"><a href="#raw-data" class="header-anchor">#</a> <a
                             href="https://tufts.box.com/s/i3cphal98hbj3vixj8ypatihwfyer1ot" target="_blank"
@@ -599,24 +590,33 @@
                     <p><img alt="pre process" data-src="/code_and_datasets/fNIRS2MW/pre-processing.png" loading="lazy"
                             class="image-fit" width="450" height="600"
                             src="images/code_and_datasets_images/fNIRS2MW/pre-processing.png"></p>
-                    <h6 id="whole-data"><a href="#whole-data" class="header-anchor">#</a> <a
-                            href="https://tufts.box.com/s/wyvz6utfrd5y5p2js0kj1990dspbnwdn" target="_blank"
-                            rel="noopener noreferrer">whole
-                            data<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"
-                                    x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
-                                    <path fill="currentColor"
-                                        d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
-                                    </path>
-                                    <polygon fill="currentColor"
-                                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
-                                    </polygon>
-                                </svg> <span class="sr-only">(opens new window)</span></span></a></h6>
+                            <h5 id="non-bpf-whole-data"><a href="#non-bpf-whole-data" class="header-anchor">#</a> <a
+                                    href="https://tufts.box.com/s/wwzg949o07q5qnxcrjgp3uxxj7f2b5fj" target="_blank" rel="noopener noreferrer">non
+                                    bpf whole data<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                                            viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
+                                            <path fill="currentColor"
+                                                d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                            </path>
+                                            <polygon fill="currentColor"
+                                                points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                            </polygon>
+                                        </svg> <span class="sr-only">(opens new window)</span></span>
+                                    </a></h5>
+                                    <h5 id="bpf-whole-data"><a href="#bpf-whole-data" class="header-anchor">#</a> <a
+                                            href="https://tufts.box.com/s/gg3p78yljbqep9tdbo635h59k6yr43su" target="_blank" rel="noopener noreferrer">bpf
+                                            whole data<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                                                    viewBox="0 0 100 100" width="15" height="15" class="icon outbound">
+                                                    <path fill="currentColor"
+                                                        d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+                                                    </path>
+                                                    <polygon fill="currentColor"
+                                                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+                                                    </polygon>
+                                                </svg> <span class="sr-only">(opens new window)</span></span></a></h5>
+
                     <p>Each subject's .csv file includes continuous data of <code
                             style="background-color: rgb(210, 201, 201);">16</code> tasks (exclude data during
                         self-evaluation (<a href="">nasa-tlx</a>) and rest period).</p>
-                    <p><em>Screenshot of deidentified data sample is as below:</em> <img alt="whole data"
-                            data-src="/code_and_datasets/fNIRS2MW/bpf_whole_data.png" loading="lazy" class="image fit"
-                            src="images/code_and_datasets_images/fNIRS2MW/bpf_whole_data.png"></p>
 
                     <h6 id="slide-window-data"><a href="#slide-window-data" class="header-anchor">#</a> <a
                             href="https://tufts.box.com/s/7l8rz3tpos1il637kmhn57mzacdldyv4" target="_blank"
@@ -652,10 +652,7 @@
                         <li>Window stride: <code style="background-color: rgb(210, 201, 201);">3</code> timestamps
                             (rough <code style="background-color: rgb(210, 201, 201);">0.6</code> second)</li>
                     </ul>
-                    <p><em>Screenshot of deidentified data sample is as below:</em> <img alt="slide window data"
-                            data-src="/code_and_datasets/fNIRS2MW/bpf_slide_window_data.png" loading="lazy"
-                            class="image fit" src="images/code_and_datasets_images/fNIRS2MW/bpf_slide_window_data.png">
-                    </p>
+                    
                     <hr class="custom-line">
                     <h4 id="supplementary-data"><a href="#supplementary-data" class="header-anchor">#</a> Supplementary
                         Data</h4>
@@ -696,8 +693,7 @@
                     response for each
                     digit. <br>
                     the accuracy of each n-back task was recorded.
-                    <p><em>Please see details in the screenshot of fake data sample as below:</em></p>
-                    <img src="images/code_and_datasets_images/fNIRS2MW/task_accuracy.png" width="30%" height="30%">
+                    
                     <hr class="custom-line">
                     <h5 id="nasa-tlx"><a href="#nasa-tlx" class="header-anchor">#</a> <a
                             href="https://tufts.box.com/s/c5y3m59wwwem0j792epjxhnq4uei5swq" target="_blank"
@@ -748,9 +744,7 @@
                             </ul>
                         </li>
                         </ul>
-                    <p><em>Please see details in the screenshot of deidentified data sample as below:</em> <img
-                            alt="nasa-tlx" data-src="/code_and_datasets/fNIRS2MW/nasa-tlx.png" loading="lazy"
-                            class="image fit" src="images/code_and_datasets_images/fNIRS2MW/nasa-tlx.png"></p>
+                    
                     <hr class="custom-line">
                     <h5 id="log"><a href="#log" class="header-anchor">#</a> <a
                             href="https://tufts.box.com/s/9ruep9b6tpeymda9qrubq64oampfh9br" target="_blank"
@@ -787,7 +781,7 @@
                 </Section>
                 <div align="right" class="content-time" data-v-22a41398="">
                     <time datetime="Nov 9, 2021" class="time-text" data-v-22a41398="">Create
-                        Time: Nov 9, 2021
+                        Time: July 15, 2024
                     </time>
                     <br>
                     <time datetime="Jun 25, 2025" class="time-text" data-v-22a41398="">Last Updated: Jun 25,
