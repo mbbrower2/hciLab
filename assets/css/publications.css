@@ -1,0 +1,34 @@
+.pub-section {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+    align-items: flex-start;
+}
+.pub-year {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 1rem;
+    color: #1a1a2e;
+    width: 60px;        /* fixed width — won't grow */
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+.pub-list {
+    font-family: 'Satoshi';
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #1a1a2e;
+    margin: 0;
+    padding-left: 20px;
+    flex: 1;            /* takes remaining space */
+}
+
+.pub-list li {
+    margin-bottom: 12px;
+}
+
+.pub-list li a {
+    color: inherit;
+    text-decoration: underline;
+}
