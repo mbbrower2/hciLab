@@ -1,8 +1,11 @@
 name: Update Publications
 
+permissions:
+  contents: write
+
 on:
   schedule:
-    - cron: "0 3 * * *"   # every night at 3am
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 jobs:
