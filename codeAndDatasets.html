@@ -60,26 +60,22 @@
         this dataset is the largest known to us by a factor of 2.5! Plus, it 
         supports fairness audits by age, gender, and race.</p>
 
-		<p class="section-sub">Quick Links</p>
-
-        <ul>
-            <li>
-            <a href="https://tufts.box.com/s/1e0831syu1evlmk9zx2pukpl3i32md6r" target="_blank" rel="noopener noreferrer">
-                Dataset files on Box.com
-            </a>
-            </li>
-            
-            <li>
-            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
-                Dataset License: CC-BY-4.0
-            </li>
-            
-            <li>
-            <a href="https://github.com/tufts-ml/fNIRS-mental-workload-classifiers" target="_blank" rel="noopener noreferrer">
-                Code on GitHub
-            </a>
-            </li>
-        </ul>
+		<div class="quickLinks">
+            <p class="section-sub" style="padding-top: 20px;">Quick Links</p>
+            <ul>
+                <li><a href="https://tufts.box.com/s/1e0831syu1evlmk9zx2pukpl3i32md6r" target="_blank" rel="noopener noreferrer">
+                    Dataset files on Box.com
+                </a></li>
+                
+                <li><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+                    Dataset License: CC-BY-4.0
+                </a></li>
+                
+                <li><a href="https://github.com/tufts-ml/fNIRS-mental-workload-classifiers" target="_blank" rel="noopener noreferrer">
+                    Code on GitHub
+                </a></li>
+            </ul>
+        </div>
         <br>
 
         <p class="section-sub">DETAILS</p>
@@ -605,14 +601,48 @@
 
                             <i>Screenshot of deidentified data sample is as below:</i>
                             <img style="max-width: 70vw;" src="images/project_images/past_project_images/bpf_slide_window_data2.png" alt="CSV preview of fNIRS dataset" />
-
                     </ol>
                     </section>
 
                 <!-- Section Title -->
                 <h2>Supplementary Data</h2>
                 To ensure quality and consistency, we used several criteria to identify which subjects' data are suitable for classifier evaluation.
+                
+                <ol type="1">
+                    <li><a href="https://tufts.box.com/s/x2o6hny7kwudg58e1364gdogbvhnwq4f">Demographic and contextual information</a></li>
+                        <p>Demographic and contextual information is recorded before the experiment.</p>
+                        <i>Note: Please see details in the data directly</i>
+                    <li><a href="https://tufts.box.com/s/gme0gsc6z9vj0v4dhchtqh04b4fpy8tm">task_accuracy</a></li>
+                        <p>We measured the subject's performance at the n-back task based on the accuracy of the subject's response for each digit.
+                            <br>
+                            The accuracy of each n-back task was recorded.</p>
+                            <i>Note: Please see details in the screenshot of fake data sample as below:</i>
+                            <img style="max-width: 30vw;" src="images/project_images/past_project_images/task_accuracy.png" alt="CSV preview of fNIRS dataset" />
+                    <li><a href="https://tufts.box.com/s/c5y3m59wwwem0j792epjxhnq4uei5swq">nasa-tlx</a></li>
+                        <p>This is a good way to evaluate the <b>perceived/subjective</b> mental workload.</p>
+                        <p>Total 16 "serial_feedback" .csv files for <code>16</code> n-back tasks:</p>
+                        <ul>
+                            <li><code>12</code> files start with "train_1_1_" (<code>1-12</code>) match the first <code>1-12</code> tasks,</li>
+                            <li><code>4</code> files start with "test_1_2_" (<code>1-4</code>) match the first <code>4</code> tasks.</li>
+                            <li>Useful features include:</li>
+                                <ul>
+                                    <li>movement: subject report if the headband is moved or not,</li>
+                                    <li>uncomfortable: subject report if feeling unfortable during the experiment or not,</li>
+                                    <li>mental: mental workload after the task from low (<code>0</code>) to high (<code>100</code>)</li>
+                                    <li>performance: performance after the task from low (<code>0</code>) to high (<code>100</code>)</li>
+                                    <li>effort: effort needed for the task from low (<code>0</code>) to high (<code>100</code>)</li>
+                                    <li>frustration: frustration felt during the task from low (<code>0</code>) to high (<code>100</code>)</li>
+                                </ul>
+                                <i>Please see details in the screenshot of deidentified data sample as below:</i>
+                                <img style="max-width: 30vw;" src="images/project_images/past_project_images/nasa-tlx.png" alt="CSV preview of fNIRS dataset" />
+                        </ul>
+                    <li><a href="https://tufts.box.com/s/9ruep9b6tpeymda9qrubq64oampfh9br">Log</a></li>
+                        <p>Hair blocking, light leaking, fNIRS instrument settings and other issues during the experiment were recorded.</p>
 
+                    <li><a href="https://tufts.box.com/s/jrn9rvph8xugstuz9ixra1l2mpfqopdh">Interview</a></li>
+                        <p>Post-experiment interviews were converted from audio to text (pdf version) by the operator.
+                        <br>The original audios were <b>destroyed</b> immediately following the IRB protocol.</p>
+                </ol>
                 </p>
                 </details>
 
