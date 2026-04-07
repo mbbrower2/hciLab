@@ -1,0 +1,686 @@
+<!doctype html>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Get Involved - Human Computer Interaction Lab</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" type="image/png" href="./assets/logo/HCILogo_tiny.png">
+	<link rel="stylesheet" href="./assets/css/universal.css">
+    <link rel="stylesheet" href="./assets/css/codeAndDatasets.css">
+</head>
+
+<body>
+
+	<!-- Nav -->
+
+    <nav class="nav">
+        <a class="nav-logo" href="index.html">
+            <img src="./assets/logo/HCILogo_tiny.png" alt="HCI Lab Logo" />
+            <div class="logo-text">Human<br>Computer<br>Interaction<br>Lab</div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="research.html">Research</a></li>
+            <li><a href="people.html">People</a></li>
+            <li><a href="codeAndDatasets.html">Code and Datasets</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+        </ul>
+    </nav>
+
+	<!-- Main -->
+	<section style="padding: 52px 24px 40px; max-width: 90%; margin: 0 auto;">
+        <p class="section-label">Code and Datasets</p>
+		<h2 class="section-title">The Tufts fNIRS to Mental Workload Dataset</h2>
+        <div class="tag-container">
+            <a href="https://tufts-hci-lab.github.io/tag/BCI/" class="tag">BCI</a>
+            <a href="https://tufts-hci-lab.github.io/tag/fNIRS/" class="tag">fNIRS</a>
+            <a class="tag">machine learning</a>
+            <a class="tag">time series classification</a>
+            <a class="tag">cognitive workload</a>
+        </div>
+        <br><br>
+		<p>Welcome to the Tufts fNIRS to Mental Workload (fNIRS2MW) open-access dataset! <br>
+
+        Using this dataset, we can train and evaluate machine learning 
+        classifiers that consume a short window (30 seconds) of multivariate 
+        fNIRS recordings and predict the mental workload intensity of the user 
+        during that interval.<br>
+
+        We have collected fNIRS brain activity recordings from 68 partipants 
+        during a series of controlled n-back experimental tasks designed to 
+        induce working memory workloads of varying relative intensity. Of all 
+        available datasets suitable for building mental workload classifiers, 
+        this dataset is the largest known to us by a factor of 2.5! Plus, it 
+        supports fairness audits by age, gender, and race.</p>
+
+		<p class="section-sub">Quick Links</p>
+
+        <ul>
+            <li>
+            <a href="https://tufts.box.com/s/1e0831syu1evlmk9zx2pukpl3i32md6r" target="_blank" rel="noopener noreferrer">
+                Dataset files on Box.com
+            </a>
+            </li>
+            
+            <li>
+            <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
+                Dataset License: CC-BY-4.0
+            </li>
+            
+            <li>
+            <a href="https://github.com/tufts-ml/fNIRS-mental-workload-classifiers" target="_blank" rel="noopener noreferrer">
+                Code on GitHub
+            </a>
+            </li>
+        </ul>
+        <br>
+
+        <p class="section-sub">DETAILS</p>
+
+        <div class="layout">
+            <main class="content">
+
+                <details class="accordion">
+                <summary>Project Motivation</summary>
+                <p>
+                    We are interested in building brain computer interfaces (BCIs) 
+                    that would help out everyday computer users working at a desktop or 
+                    laptop. In our target future use case, a user would actively use 
+                    a keyboard and mouse as usual, but also wear a non-intrusive 
+                    headband sensor that would passively provide real-time measurements 
+                    of brain activity to the computer. Based on moment-to-moment estimates 
+                    of mental workload, the computer could adjust the interface to support the user.
+                    <br>
+
+                    Functional near-infrared spectroscopy (fNIRS) is a promising sensor technology 
+                    for achieving this goal of "everyday BCI". We have developed a prototype fNIRS 
+                    probe mounted on a headband that we used to collect this dataset.
+                    <br>
+
+                    Looking at the first decade of research on using fNIRS to estimate mental 
+                    workload, we have identified three barriers that stand in the way of 
+                    building effective mental workload classifiers using fNIRS data:
+                    <br>
+                    <br>
+
+                    <ol type="1">
+                    <li><b>The lack of available data.</b><br>Previous work typically collects proprietary 
+                    datasets from only 10-30 subjects, often from very homogenous populations. 
+                    Much larger, more heterogeneous open-access datasets are needed to build 
+                    everyday BCI systems that work for many users.</li><br>
+
+                    <li><b>The lack of standardized evaluation protocols.</b><br>Many previous efforts to 
+                    build mental workload classifiers do not follow best practices in terms 
+                    of dividing data into training and test sets in a way that allows reliable 
+                    assessment of generalization potential (how well will this work for a new 
+                    user?). For many works, it is not even clear how to reproduce their train/test splits. 
+                    The release of a dataset should be accompanied by a standardized protocol, 
+                    so that other teams can follow the very same experimental design, which makes 
+                    results comparable and enables scientific progress.</li><br>
+                        
+                    <li><b>The high cross-subject variability in fNIRS data.</b><br>Collected sensor data 
+                    varies due to differences in individual physiology, sensor placement, and 
+                    other sources of noise. It is important that datasets represent this 
+                    diversity so that progress can be made in generalizing to new users and new sessions.</li><br>
+
+                    Our project's <i><b>contributions</b></i> are: <br><br>
+
+                    <ul>
+                        <li>We release a <b>large open-access dataset</b> of 68 participants. 
+                        This dataset is the largest known to us by a factor of 2.5.</li><br>
+
+                        <li>We provide a <b>standardized protocol</b> for evaluating classifiers 
+                        and report benchmark results on our data under three paradigms 
+                        of training: subject-specific, generic, and generic + fine-tuning. 
+                        See our paper (opens new window)and code (opens new window)for details.</li><br>
+
+                        <li>We provide <b>rich demographic information for each subject</b> (age, 
+                        gender, race, handedness) which enables auditing the "fairness" 
+                        of fNIRS classifier performance across subpopulations. We view such 
+                        audits as essential to make sure BCI works for everybody.</li><br>
+
+                        <li>Our dataset is targeted at <b>everyday BCI.</b> Our headband-mounted 
+                        sensor is non-intrusive and easy to put on / take off when performing 
+                        everyday tasks. It does not require a fabric cap covering the whole skull 
+                        (like many alternatives) and does not require any complicated registration to landmarks.</li><br>
+                    </ul>
+                </p>
+                </details>
+
+                <details class="accordion">
+                <summary>Dataset Summary</summary>
+                <p>
+                    For a complete dataset summary, see our public 
+                    <a href="https://raw.githubusercontent.com/tufts-ml/fNIRS-mental-workload-classifiers/main/Datasheet-Tufts-fNIRS2MW.pdf">
+                        Datasheet PDF
+                    </a>.<br>
+
+                    For each participant (68 recommended; 87 total), the dataset 
+                    contains the following records obtained during one 30-60 minute 
+                    experimental session. Each subject contributes just over 21 minutes 
+                    of fNIRS data from the desired n-back experimental conditions, with 
+                    remaining time related to rest or instruction periods.<br>
+
+                    <ul class="main-list">
+                        <li>
+                            <strong>fNIRS recordings</strong>
+                            <ul class="sub-list">
+                            <li>
+                                A multivariate time-series representing brain activity throughout the session, 
+                                recorded by a sensor probe placed on the forehead and secured via headband.
+                            </li>
+                            <li>
+                                All measurements are recorded at a regular sampling rate of 5.2 Hz.
+                            </li>
+                            <li>
+                                At each timestep, we record 8 real-valued measurements: combinations of 
+                                oxygenated and deoxygenated hemoglobin, intensity and phase optical data, 
+                                and two spatial locations. Units are micro-moles of hemoglobin per liter of tissue.
+                            </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Activity labels</strong>
+                            <ul class="sub-list">
+                            <li>
+                                Annotations of the experimental task activity performed throughout the session, 
+                                including instruction, rest, and active segments.
+                            </li>
+                            <li>
+                                Each active segment is labeled as one of four n-back levels (0–3), reflecting 
+                                increasing cognitive workload.
+                            </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Demographics</strong>
+                            <ul class="sub-list">
+                            <li>
+                                Includes participant age, gender, race, handedness, and other attributes.
+                            </li>
+                            <li>
+                                Enables performance analysis across subpopulations.
+                            </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <strong>Activity performance</strong>
+                            <ul class="sub-list">
+                            <li>
+                                Records correctness in working memory tasks (e.g., identifying matches from n steps ago).
+                            </li>
+                            <li>
+                                Supports data quality assessment and eligibility filtering.
+                            </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <br>
+
+                    <section class="dataset-section">
+
+                        <h2>Sliding window fNIRS data for classifiers</h2>
+
+                        <p>
+                            To improve analysis speed and reproducibility, we also make available a preprocessed 
+                            version of the data that was used in all our reported experiments. We applied bandpass 
+                            filtering to remove artifacts, and extracted sliding windows of length 30 seconds and 
+                            stride 0.6 seconds (3 timesteps).
+                        </p>
+
+                        <p>
+                            Per-subject CSV files containing the sliding window data using windows with 30-second 
+                            duration and 0.6-second stride are available
+                            <a href="https://tufts.app.box.com/s/7l8rz3tpos1il637kmhn57mzacdldyv4/folder/144901642550" target="_blank" rel="noopener noreferrer">
+                                here
+                            </a>:
+                        </p><br>
+
+                        <p><em>Screenshot of the first few lines of the CSV from one subject's data:</em></p>
+                        <br>
+                        <img style="max-width: 90vw;" src="images/project_images/past_project_images/bpf_slide_window_data.png" alt="CSV preview of fNIRS dataset" />
+                        <br>
+                        <p>Each row of the CSV file represents the fNIRS sensor measurements at one timestep.</p><br>
+
+                        <p>There are 2 columns used as <em>keys and labels</em>:</p>
+
+                        <ul class="sub-list">
+                            <li><code>chunk</code>: indicating the index of the window (increments over time)</li>
+                            <li><code>label</code>: indicating intensity level (0, 1, 2, or 3)</li>
+                        </ul>
+
+                        <p>
+                            All rows with the same <code>chunk</code> id represent the time series for a specific 
+                            window. This window is the input to the classifier.
+                        </p>
+
+                        <p>
+                            There are 8 measurement columns, used as <em>features</em> for machine learning classifiers:
+                        </p>
+
+                        <ul class="sub-list">
+                            <li>AB_I_O, AB_PHI_O, AB_I_DO, AB_PHI_DO</li>
+                            <li>CD_I_O, CD_PHI_O, CD_I_DO, CD_PHI_DO</li>
+                        </ul>
+
+                        <p>
+                            Each column represents a measurement of hemoglobin concentration in the brain. Changes 
+                            in oxygenation over time act as a proxy for mental workload intensity. Units are μmol/L 
+                            (micromoles per liter).
+                        </p>
+
+                        <p>The feature names indicate:</p>
+
+                        <ul class="sub-list">
+                            <li>Sensor location on the forehead (AB or CD)</li>
+                            <li>Optical measurement type (I = intensity, PHI = phase)</li>
+                            <li>Hemoglobin type (O = oxygenated, DO = deoxygenated)</li>
+                        </ul>
+
+                        <p class="note">
+                            <strong>Note:</strong> Our Box dataset also includes other window sizes (2, 5, 10, 20, 30, 40 seconds). 
+                            We focus on 30-second windows as preferred.
+                        </p>
+
+                    </section>
+                </p>
+                </details>
+
+                <details class="accordion">
+                <summary>Publications</summary>
+                <p>
+                    The paper describing our dataset and benchmarks can be found here:
+
+                    <div class="callout">
+                        <p>
+                            <a href="https://openreview.net/pdf?id=QzNHE7QHhut" target="_blank">
+                            <strong>The Tufts fNIRS Mental Workload Dataset & Benchmark for Brain-Computer Interfaces that Generalize</strong>
+                            </a>
+                        </p>
+
+                        <p>
+                            Zhe Huang, Liang Wang, Giles Blaney, Christopher Slaughter, 
+                            Devon McKeon, Ziyu Zhou, Robert Jacob, and 
+                                <a href="https://tufts-hci-lab.github.io/code_and_datasets/www.michaelchughes.com">
+                                    Michael C. Hughes</a>
+                            To appear in the Proceedings of <a href="https://tufts-hci-lab.github.io/code_and_datasets/fNIRS2MW.html">
+                                Neural Information Processing Systems (NeurIPS 2021) Track on Datasets and Benchmarks 
+                            </a>
+                            , 2021
+                        </p>
+                    </div>
+
+                    Lead authors ZH & LW contributed equally, as did supervisory authors RJ & MCH. <br>
+                    <br>
+                    We are pleased to report that the paper describing our dataset and benchmarks 
+                    was recently accepted for publication at the new <a href="https://tufts-hci-lab.github.io/code_and_datasets/fNIRS2MW.html">
+                        Track on Datasets and Benchmarks happening at NeurIPS 2021.
+                    </a> 
+                    NeurIPS is a top-tier conference for machine learning research.
+                    <br>
+                    Please cite our papers if you find these datasets (fNIRS2MW-Visual and fNIRS2MW-Audio) useful:
+                    
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+
+                        <pre><code id="bibtex">
+    @inproceedings{wang2021taming,
+    title={Taming fNIRS-based BCI input for better calibration and broader use},
+    author={Wang, Liang and Huang, Zhe and Zhou, Ziyu and McKeon, Devon and Blaney, Giles and Hughes, Michael C and Jacob, Robert JK},
+    booktitle={The 34th Annual ACM Symposium on User Interface Software and Technology},
+    pages={179--197},
+    year={2021}
+    }
+    @inproceedings{huangfNIRS2MW2021,
+        title = {The Tufts fNIRS Mental Workload Dataset & Benchmark for Brain-Computer Interfaces that Generalize},
+        booktitle = {Proceedings of the Neural Information Processing Systems (NeurIPS) Track on Datasets and Benchmarks},
+        author = {Huang, Zhe and Wang, Liang and Blaney, Giles and Slaughter, Christopher and McKeon, Devon and Zhou, Ziyu and Jacob, Robert J. K. and Hughes, Michael C.},
+        year = {2021},
+        url = {https://openreview.net/pdf?id=QzNHE7QHhut},
+    }
+    @inproceedings{wang2024empower,
+    title={Empower Real-World BCIs with NIRS-X: An Adaptive Learning Framework that Harnesses Unlabeled Brain Signals},
+    author={Wang, Liang and Zhang, Jiayan and Liu, Jinyang and McKeon, Devon and Brizan, David Guy and Blaney, Giles and Jacob, Robert JK},
+    booktitle={Proceedings of the 37th Annual ACM Symposium on User Interface Software and Technology},
+    pages={1--16},
+    year={2024}
+    }
+                        </code></pre>
+                        </div>
+                </p>
+                </details>
+
+                <details class="accordion">
+                <summary>Data Collection Procedures</summary>
+                <p>
+                    <br>
+                    <em>IRB and COVID-19 Safety Approval</em>
+                    <br><br>
+                    Procedures to collect data were approved by Tufts institution's 
+                    IRB (opens new window), and our deidentified dataset was approved 
+                    for public release (STUDY00000959). Each participant gave informed 
+                    written consent, and was compensated $20 US.
+                    <br>
+                    Because collection occurred during the COVID-19 pandemic in early 2021, 
+                    we also got approval from the Tufts Integrative Safety Committee (ISC). 
+                    We followed required sanitation and social distancing practices: experimenters 
+                    used personal protective equipment and disinfected the fNIRS probe for each subject.
+                    <br><br>
+                    <em>Task Description</em>
+                    <br><br>
+                    <ul>
+                        <li>Each participant completed 16 blocks of n-back trails (0→1→2→3→1→2→3→0→2→3→0→1→3→0→1→2).</li>
+                        <li>Each block is composed of 40 trails ( display for 0.5 seconds, hidden for 1.5 seconds).</li>
+                    </ul>
+
+                    <i>Details of task sessions is as below:</i>
+                    <img style="max-width: 60vw;" src="images/project_images/past_project_images/task-flowchart.png" alt="CSV preview of task flowchart" />
+
+                    <br><br>
+                    <b><em>Task Introduction</em></b>
+                    <br><br>
+                    <b>N-back video introduction:</b>
+
+                    Before experiment started, the system played a short introductory video, 
+                    showing an example of a user completing n-back tasks, with voice-over and caption explanations.
+
+                    <i>Sample scripts for N-back task video are as below:</i>
+
+                    <div class="script-container">
+
+                        <button class="nav-btn" id="upBtn">↑</button>
+
+                        <div class="script-window">
+
+                            <div class="script active">
+                                <p><b>Today you will be completing a series of n-back tasks.</b> You will be presented with many numbers, 
+                                    one after another. Some of these numbers will be targets. A number is a target if it is identical 
+                                    to the one shown n steps previously.
+
+                                    Here is an example of a 2-back task. In this case, n = 2. The highlighted 8 is a target number, 
+                                    since the number 2 steps back is also 8.
+
+                                    Your job will be to press the left arrow key each time you see one of these target numbers. 
+                                    If the number shown is not a target number, you should press the right arrow key.</p>
+                            </div>
+
+                            <div class="script">
+                                <p><b>Let’s view an example of a 0-back task.</b>
+                                At the beginning of each task, you will hear a few beeps which indicate the start of the task.
+                                The current type of n-back task can be found at the top of the task window. In this example, 
+                                n = 0. For the purposes of this demo only, the stack of numbers already shown is included 
+                                beneath the task window.
+                                When n = 0, every number is a target, since every number is identical to the number 0 steps back. 
+                                That is, every number is the same as itself. For 0-back, the participant presses the left arrow key 
+                                after each number appears, and never presses the right arrow key.</p>  
+                            </div>
+
+                            <div class="script">
+                            <p><b>Now let’s view an example of a 1-back task.</b>
+                            The participant should press the right arrow key for all non-target numbers. When n = 1, a number is 
+                            only a target if it is identical to the number 1 step back. Once the participant identifies a target 
+                            number, they should press the left arrow key instead.
+                            For example, this 4 is a target number because the previous number was also 4. The participant 
+                            should press the left arrow key, and then continue pressing the right arrow key until they see the 
+                            next target number.
+                            Here is another target number. The number 1-step back was also 2, so the participant should 
+                            press the left arrow key.
+                            During today’s experiment, the stack of already shown numbers will not be visible to you. 
+                            It is your job to remember the numbers that were n-steps back so that you are able to identify 
+                            the correct target numbers.</p>
+                            </div>
+
+                            <div class="script">
+                            <p><b>There will be 16 rounds in total.</b> During each round, you will complete an n-bask task, 
+                                where n is either 0, 1, 2, or 3.
+                            Before each task, there will be instructions reminding you how to find the target numbers for the 
+                            current n. During the task, you will be shown 40 numbers. Each time you see a target number, 
+                            you should press the left arrow key. For all non-target numbers, you should press the right arrow key.
+                            After each task, you will complete a survey. Once you have completed the survey, you will be able 
+                            to rest for 20 seconds.
+                            The experiment will take approximately 40 minutes.
+                            After the entire experiment is finished, you will complete a short interview about your experience.
+                            Please remain seated and do not talk or adjust the headband while completing the experiment. 
+                            However, if you do feel uncomfortable at any point, let the operator know and they will stop the experiment.</p>
+                            </div>
+
+                        </div>
+                        <button class="nav-btn" id="downBtn">↓</button>
+                    </div>
+
+                    <br><br>
+                    <b><em>General introduction</em></b>: Before each task, the system displayed a graphic depicting how to identify targets for the current n, with voice-over.
+                    <br><br>
+                    <b>The graphic and sample scripts for 0-back are as below:</b>
+
+                    <div class="sampleNbackPics">
+                        <div>
+                            <img src="images/project_images/past_project_images/intro_0_back.png" />
+                            <p>"This is a 0 back task. Every number is a target number."</p>
+                        </div>
+
+                        <div>
+                            <img src="images/project_images/past_project_images/intro_1_back.png" />
+                            <p>"This is a 1 back task. A number is a target if it is identical to the previous number."</p>
+                        </div>
+
+                        <div>
+                            <img src="images/project_images/past_project_images/intro_2_back.png" />
+                            <p>"This is a 2 back task. A number is a target if it is identical to the number 2 steps back."</p>
+                        </div>
+
+                        <div>
+                            <img src="images/project_images/past_project_images/intro_3_back.png" />
+                            <p>"This is a 3 back task. A number is a target if it is identical to the number 3 steps back."</p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <em>Data Structure</em>
+                    <br><br>
+
+                    Our released dataset includes (<a href="https://tufts.box.com/s/1e0831syu1evlmk9zx2pukpl3i32md6r">Link to fNIRS2MW dataset</a>):
+
+                    <ul>
+                        <li>fNIRS measurements in <a href="https://tufts.box.com/s/9jwy67dw2b6emmslutxhmgihk92ivnf2">fNIRS_data</a></li>
+                        <li>Supplementary data:</li>
+                            <ul>
+                                <li>Demographic and contextual information in <a href="https://tufts.box.com/s/x2o6hny7kwudg58e1364gdogbvhnwq4f">pre-experiment</a></li>
+                                <li>Cognitive task performance in <a href="https://tufts.box.com/s/gme0gsc6z9vj0v4dhchtqh04b4fpy8tm">task_accuracy</a></li>
+                                <li>Experiment log in <a href="https://tufts.box.com/s/9ruep9b6tpeymda9qrubq64oampfh9br">log</a></li>
+                                <li>Post-experiment interview in <a href="https://tufts.box.com/s/jrn9rvph8xugstuz9ixra1l2mpfqopdh">interview</a></li>
+                                <li>subjective workload in <a href="https://tufts.box.com/s/c5y3m59wwwem0j792epjxhnq4uei5swq">nasa-tlx</a></li>
+                            </ul>
+                    </ul>
+                    <section class="data-format-section">
+
+                    <!-- Code Block -->
+                    <div class="code-block">
+                    <pre><code>
+                    ****************************************
+                    ** fNIRS2MW dataset folder structure **
+                    ****************************************
+                    |-- qualified_subjects_list.pdf
+                    |-- pre-experiment                //
+                    |-- experiment                    //
+                    |   |-- log                       //
+                    |   |-- task_accuracy             //
+                    |   |-- fNIRS_data                //
+                    |   |   |-- raw_data              //
+                    |   |   |-- band_pass_filtered    //
+                    |   |   |-- whole_data            //
+                    |   |   |-- slide_window_data     //
+                    |   |   |   |-- size_02sec_10ts_stride_03ts
+                    |   |   |   |-- size_05sec_25ts_stride_03ts
+                    |   |   |   |-- size_10sec_50ts_stride_03ts
+                    |   |   |   |-- size_20sec_100ts_stride_03ts
+                    |   |   |   |-- size_30sec_150ts_stride_03ts
+                    |   |   |   |-- size_40sec_200ts_stride_03ts
+                    |-- post-experiment               //
+                    |   |-- nasa-tlx                  //
+                    |   |-- interview                 //
+                    |   |-- * (all other folders)     //
+                    </code></pre>
+                    </div>
+
+                    <!-- Section Title -->
+                    <h2>Data Format</h2>
+
+                    <p>
+                        We introduce and describe the data format of fNIRS data (raw and pre-processed) 
+                        and supplementary data as below:
+                    </p>
+
+                    <!-- fNIRS Data -->
+                    <ol type="1">
+                        <li><h3 class="link-heading"><a href="https://tufts.box.com/s/9jwy67dw2b6emmslutxhmgihk92ivnf2">fNIRS Data</a></h3></li>
+
+                        <p>
+                            <span class="tag">68</span> participants were recruited, aged 
+                            <span class="tag">18</span> to <span class="tag">44</span> years. 
+                            <span class="tag">None</span> of the participants reported neurological or psychiatric conditions.
+                        </p>
+
+                        <li><h3 class="link-heading"><a href="https://tufts.box.com/s/i3cphal98hbj3vixj8ypatihwfyer1ot">raw data</a></h3></li>
+
+                        <li><h3 class="link-heading"><a href="https://tufts.box.com/s/bj0iml74am3wnuittzmjggjemxxgz2cp">band pass filtered data</a></h3></li>
+                            <p>
+                                After pre-processing (<strong>Dual-slope</strong> and <strong>band pass filter</strong>), 
+                                we have <em>features/columns</em> as below:
+                            </p>
+                    
+                        <br>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start;">
+                            <img style="max-width: 30vw;" src="images/project_images/past_project_images/pre-processing.png" alt="CSV preview of fNIRS dataset" />
+                            <div>
+                                <ul style="list-style-type: none;">
+                                    <li>
+                                    <strong>label</strong>: The label for each row.
+                                    <ul>
+                                        <li>Values are in {0, 1, 2, 3}</li>
+                                        <li>Same for all rows in the same chunk</li>
+                                    </ul>
+                                    </li>
+
+                                    <li>
+                                    <strong>chunk</strong> (Only in slide window data):
+                                    <ul>
+                                        <li>Starts at <span class="tag">0</span></li>
+                                        <li>Increases by <span class="tag">1</span></li>
+                                        <li>Same for all rows in the same chunk</li>
+                                    </ul>
+                                    </li>
+
+                                    <br>
+
+                                    <li><strong>AB_I_O, AB_I_DO</strong>: Intensity from detector AB</li>
+                                    <li><strong>CD_I_O, CD_I_DO</strong>: Intensity from detector CD</li>
+                                    <li><strong>AB_PHI_O, AB_PHI_DO</strong>: Phase from detector AB</li>
+                                    <li><strong>CD_PHI_O, CD_PHI_DO</strong>: Phase from detector CD</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <li><h3 class="link-heading"><a href="https://tufts.box.com/s/wyvz6utfrd5y5p2js0kj1990dspbnwdn">Whole data</a></h3></li>
+                            <p>Each subject's .csv file includes continuous data of <code>16</code> tasks (exclude data during self-evaluation 
+                                (<a href="nasa-tlx">nasa-tlx</a>) and rest period). </p>
+                            <i>Screenshot of deidentified data sample is as below:</i>
+                            <img style="max-width: 70vw;" src="images/project_images/past_project_images/bpf_whole_data1.png" alt="CSV preview of fNIRS dataset" />
+
+                        <li><h3 class="link-heading"><a href="https://tufts.box.com/s/7l8rz3tpos1il637kmhn57mzacdldyv4">Slide window data</a></h3></li>
+                            <p>We offer pre processed data in :</p>
+                            <ul>
+                                <li>Window size: <code>10/25/50/100/150/200</code> timestamps <code>(2/5/10/20/30/40</code> seconds)</li>
+                                <li>Window stride: <code>3</code> timestamps (rough <code>0.6</code> second)</li>
+                            </ul>
+
+                            <i>Screenshot of deidentified data sample is as below:</i>
+                            <img style="max-width: 70vw;" src="images/project_images/past_project_images/bpf_slide_window_data2.png" alt="CSV preview of fNIRS dataset" />
+
+                    </ol>
+                    </section>
+
+                <!-- Section Title -->
+                <h2>Supplementary Data</h2>
+                To ensure quality and consistency, we used several criteria to identify which subjects' data are suitable for classifier evaluation.
+
+                </p>
+                </details>
+
+            </main>
+        </div>
+
+        <!-- 
+        Note: idk if this is still relavant:
+        <p>
+            If you have any questions, please reach out to 
+            <a href="mailto:leonwang@cs.tufts.edu">Leon</a>
+        </p> -->
+
+	</section>
+	<!-- Footer -->
+	<footer class="site-footer">
+        © Rob Jacob. All rights reserved.
+    </footer>
+
+	<!-- Scripts -->
+	<!-- <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script> -->
+
+    <script>
+        document.querySelector('.copy-btn').addEventListener('click', function () {
+            const text = document.getElementById('bibtex').innerText;
+            navigator.clipboard.writeText(text);
+
+            this.innerText = "Copied!";
+            setTimeout(() => this.innerText = "Copy", 1500);
+        });
+
+        const scripts = document.querySelectorAll('.script');
+        let index = 0;
+
+        function showScript(i) {
+            scripts.forEach(s => s.classList.remove('active'));
+            scripts[i].classList.add('active');
+        }
+
+        document.getElementById('upBtn').onclick = () => {
+            index = (index - 1 + scripts.length) % scripts.length;
+            showScript(index);
+        };
+
+        document.getElementById('downBtn').onclick = () => {
+            index = (index + 1) % scripts.length;
+            showScript(index);
+        };
+
+        // keyboard support 🔥
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "ArrowUp") {
+            index = (index - 1 + scripts.length) % scripts.length;
+            showScript(index);
+            }
+            if (e.key === "ArrowDown") {
+            index = (index + 1) % scripts.length;
+            showScript(index);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
