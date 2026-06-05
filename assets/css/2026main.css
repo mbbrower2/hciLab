@@ -167,6 +167,44 @@ nav {
     font-style: italic;
 } */
 
+/* ── DROPDOWN ── */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    background: rgba(10, 20, 80, 0.95);
+    min-width: 170px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    padding: 8px 0;
+    list-style: none;
+    z-index: 100;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.85) !important;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+.dropdown-menu a:hover {
+    color: #fff !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 /* ── CARDS ── */
 .card {
     background: #fff;
