@@ -1,7 +1,8 @@
 /* ── HERO ── */
 
 .hero {
-    background: url('./images/brain.png') center / cover no-repeat;
+    /* background: url('./images/brain.png') center / cover no-repeat; */
+    background: url('../brainBGAssets/brain_idle.png') center / cover no-repeat;
     min-height: 100vh;
     display: flex;
     align-items: center;
