@@ -1,13 +1,30 @@
 /* ── HERO ── */
 
 .hero {
-    /* background: url('./images/brain.png') center / cover no-repeat; */
+    position: relative;
     background: url('../brainBGAssets/brain_idle.png') center / cover no-repeat;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    }
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: heroFadeIn 1.5s ease-in forwards;
+}
+
+@keyframes heroFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 /* dark overlay so text stays legible */
 .hero::before {

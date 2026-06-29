@@ -4,14 +4,11 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>HCI Lab – Human Computer Interaction Lab</title>
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script> -->
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
 	<link rel="icon" type="image/png" href="./assets/logo/HCILogo_tiny.png">
     <link rel="stylesheet" href="./assets/css/universal.css">
 	<link rel="stylesheet" href="./assets/css/2026main.css" />
-  <!-- <style>
-    
-  </style> -->
+
 </head>
 <body>
 
@@ -24,10 +21,12 @@
 
 <!-- ═══════════════ HERO ═══════════════ -->
 <section class="hero">
+    <video class="hero-video" autoplay muted playsinline poster="./assets/brainBGAssets/brain_idle.png">
+        <source src="./assets/brainBGAssets/brain_entry.mp4" type="video/mp4">
+    </video>
     <!-- Nav -->
     <nav>
         <div class="nav-logo">
-            <!-- <img src="./assets/logo/HCILogo_full.png" alt="HCI Lab Logo" style="height:38px; width:auto; filter: brightness(0) invert(1);" /> -->
             <img src="./assets/logo/HCILogo_tiny.png"
             alt="HCI Lab Logo"
             class="h-10 object-contain filter invert" />
@@ -59,8 +58,8 @@
             <em>Enhancing human potential.</em>
         </h1>
         <div class="hero-buttons">
-            <button class="btn-outline">Current Research</button>
-            <button class="btn-filled">Meet the Team</button>
+            <button class="btn-outline"><a href="research.html">Current Research</a></button>
+            <button class="btn-filled"><a href="people.html">Meet the Team</a></button>
         </div>
     </div>
 </section>
