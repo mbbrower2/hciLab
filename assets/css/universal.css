@@ -175,12 +175,17 @@ body {
     font-weight: 700;
     font-size: 35px;
     line-height: 1.2;
-    margin-top: 85px;
+    margin-top: 70px;
     margin-bottom: 55px;
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
     color: #6ACAF6;
+}
+
+.section-intro {
+    margin-top: 70px;
+    font-size: 18px;
 }
 
 .btn-outline {

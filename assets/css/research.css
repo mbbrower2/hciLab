@@ -54,3 +54,8 @@
     line-height: 1.65;
     font-family: 'Satoshi';
 }
+
+.past-projects-note {
+    text-align: center;
+    margin-bottom: 70px;
+}

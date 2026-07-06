@@ -46,16 +46,13 @@
 }
 
 .hero-content h1 {
-    color: #fff;
+    color: #ffffff;
     font-family: 'Satoshi-Regular';
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.5;
     max-width: 500px;
-    
-    text-shadow:
-0 2px 4px rgba(0, 0, 0, 0.5),
-0 6px 16px rgba(0, 0, 0, 0.35);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     margin-bottom: 1.2em;
 }
 
@@ -92,11 +89,11 @@
 
 .btn-filled {
     background: #fff;
-    color: #3B6AD1;
+    color: #152a58;
     border: 1.5px solid #fff;
     border-radius: 5px;
     padding: 12px 20px;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -104,6 +101,11 @@
     transition: opacity 0.2s;
 }
 .btn-filled:hover, .btn-outline:hover { opacity: 0.88; }
+
+.btn-outline a,
+.btn-filled a {
+    color: inherit;
+}
 
 /* ── NAV ── */
 nav {
@@ -239,8 +241,8 @@ nav {
 }
 
 .card-icon {
-    width: 36px;
-    height: 36px;
+    width: 50px;
+    height: 50px;
     border: 1.5px solid #ccc;
     border-radius: 6px;
     display: flex;
@@ -258,7 +260,7 @@ nav {
 }
 
 .card p {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: #666;
     line-height: 1.5;
     margin-bottom: 10px;
