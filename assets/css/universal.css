@@ -191,7 +191,7 @@ body {
 .btn-outline {
     color: #fff;
     border-radius: 5px;
-    border: none; 
+    border: none;
     background: #6ACAF6;
     padding: 12px 20px;
     font-size: 0.75rem;
@@ -199,7 +199,8 @@ body {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
-    
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+
 }
 
 .btn-filled {
@@ -213,6 +214,7 @@ body {
     letter-spacing: 0.08em;
     text-transform: uppercase;
     cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     transition: opacity 0.2s;
 }
 .btn-filled:hover, .btn-outline:hover { opacity: 0.88; }
