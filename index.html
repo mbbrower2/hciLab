@@ -1,154 +1,142 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Human Computer Interaction Lab</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
-	<style>
-		body,h1,h2,h3,h4,h5 {
-			color: white;
-			/* Sets the default text color to white for the entire body */
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HCI Lab – Human Computer Interaction Lab</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./assets/logo/HCILogo_tiny.png">
+    <link rel="stylesheet" href="./assets/css/universal.css">
+    <link rel="stylesheet" href="./assets/css/2026main.css" />
 
-		}
-	</style>
 </head>
 
-<body class="is-preload">
+<body>
 
-	<!-- Sidebar -->
-	<section id="sidebar">
-		<div class="inner">
-			<nav>
-				<ul>
-					<li><a href="#intro">Home</a></li>
-					<li><a href="people.html">People</a></li>
-					<li><a href="research.html">Research</a></li>
-					<li><a href="publications.html">Publications</a></li>
-					<li><a href="contactUs.html">Get Involved</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted playsinline poster="./assets/brainBGAssets/brain_idle.png">
+            <source src="./assets/brainBGAssets/brainBgVideo.mp4" type="video/mp4">
+        </video>
+        <!-- Nav -->
+        <nav>
+            <div class="nav-logo">
+                <img src="./assets/logo/HCILogo_tiny.png" alt="HCI Lab Logo"
+                    class="h-10 object-contain filter invert" />
+                <div class="logo-text">Human<br>Computer<br>Interaction<br>Lab</div>
+            </div>
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="research.html">Research</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="research.html">Current Projects</a></li>
+                        <li><a href="pastProjects.html">Past Projects</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="people.html">People</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="people.html">Current Members</a></li>
+                        <li><a href="alumni.html">Alumni</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="contactUs.html">Contact</a></li>
+            </ul>
+        </nav>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+        <!-- Hero text -->
+        <div class="hero-content">
+            <!-- <h1 style="text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.6),
+        0 6px 16px rgba(0, 0, 0, 0.45);" > -->
+            <h1 style="text-shadow: 
+        0 2px 6px rgba(0,0,0,0.6), 
+        0 1px 2px rgba(0,0,0,0.8),
+        0 0px 100px rgba(0,0,0,0.6);
+        ">
+                Bridging minds and machines.<br>
+                <em>Enhancing human-computer communication.</em>
+            </h1>
+            <div class="hero-buttons">
+                <a href="research.html" class="btn-outline"
+                    style="text-decoration: none; display: inline-block;">Current Research</a>
+                <a href="people.html" class="btn-filled" style="text-decoration: none; display: inline-block;">Meet the
+                    Team</a>
+            </div>
+        </div>
+    </section>
 
-		<!-- Intro -->
-		<section id="intro" class="wrapper style1 fullscreen fade-up">
-			<div class="inner">
-				<h1>Human Computer Interaction Lab</h1>
-				<p>Bridging minds and machines to enhance human potential</p>
-			</div>
-		</section>
+    <!-- ═══════════════ RESEARCH FOCUS ═══════════════ -->
+    <section style="padding: 52px 24px 40px; max-width: 900px; margin: 0 auto; margin-top: 70px;">
+        <p class="section-label">Research Focus</p>
+        <h2 class="section-title" style="font-size: 50px;">Advancing the Field of HCI</h2>
+        <h1 style="margin-top: 30px;">Building a new generation of "implicit" brain-computer interfaces.</h1>
 
-		<!-- One -->
-		<section id="one" class="wrapper style2 spotlights">
-			<section>
-				<a href="#" class="image"><img src="images/HCILab3.JPG" alt="" data-position="center center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Current Focus</h2>
-						<p> The current focus of our lab is on a new generation of "implicit" brain-computer
-							interfaces. Our work in real-time measurement and
-							machine learning classification of functional near
-							infrared spectroscopy (fNIRS) brain data allows to create, use, and study new kinds of
-							implicit user interfaces based on brain measurement.
-						</p>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/MusicLearning.png" alt="" data-position="top center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Broader Focus</h2>
-						<p> We are now also broadening this work to include other forms of lightweight, passive,
-							real-time adaptive implicit interaction, based on physiological or other measurements. Our
-							focus continues to be on the design of subtle and effective implicit interfaces that make
-							judicious use of the measurements we can obtain..</p>
-					</div>
-				</div>
-			</section>
-		</section>
+        <div style="display:flex; gap:16px; margin-top:60px;">
+            <!-- Card 1 -->
+            <div class="card">
 
-		<!-- Two -->
-		<section id="two" class="wrapper style3 fade-up">
-			<div class="inner">
-				<h2>Learn More</h2>
-				<div class="features">
-					<section>
-						<a href='codeDatasets.html'>
-							<span class="icon solid major fa-code"></span>
-							<h3>Code and Datasets</h3>
-							<p>View open source code or datasets developed by the lab</p>
-						</a>
-					</section>
-					<section>
-						<a href='people.html'>
-							<span class="icon solid major fa-users"></span>
-							<h3>People</h3>
-							<p>View a listing of lab members</p>
-						</a>
-					</section>
-					<section>
-						<a href='publications.html'>
-							<span class="icon solid major fa-file-alt"></span>
-							<h3>Publications</h3>
-							<p>View a list of publications from the lab</p>
-						</a>
-					</section>
-					<section>
-						<a href='research.html'>
-							<span class="icon solid major fa-desktop"></span>
-							<h3>Research</h3>
-							<p>Learn more about the research done in the HCI Lab</p>
-						</a>
-					</section>
-					<section>
-						<a href='contactUs.html'>
-							<span class="icon solid major fa-hands-helping"></span>
-							<h3>Get Involved</h3>
-							<p>Learn more about getting involved with the lab as a student, research assistant, or
-								collaborator</p>
-						</a>
-					</section>
-					<section>
 
-					</section>
-				</div>
-			</div>
-		</section>
+                <img src="images/fnirs_image.jpg" alt="fNIRS device" class="card-icon">
 
-	</div>
+                <h3>Key Computational Techniques</h3>
+                <p>fNIRS: a non-invasive neuroimaging technique that measures brain activity by shining light into the
+                    brain to track blood oxygenation changes</p>
+            </div>
 
-	<!-- Footer -->
-	<footer id="footer" class="wrapper style1-alt">
-		<div class="inner">
-			<ul class="menu">
-				<li>&copy; Rob Jacob. All rights reserved.</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</div>
-	</footer>
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="images/interface.png" alt="example interface" class="card-icon">
+                <h3>Implicit and Adaptive User Interfaces</h3>
+                <p>Interfaces that respond in real time without the user explicitly thinking about it</p>
+            </div>
+        </div>
+    </section>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+    <!-- ═══════════════ FEATURED WORK ═══════════════ -->
+    <section style="padding: 40px 24px 60px; max-width: 720px; margin: 0 auto;">
+        <p class="section-label">Featured Work</p>
+        <h2 class="section-title">Current Projects</h2>
+
+        <div style="margin-top: 70px; display: flex; gap: 30px; flex-wrap: wrap;">
+            <div class="project-card">
+                <div class="project-img">
+                    <div class="badge">Current</div>
+                    <a href="research.html">
+                        <img src="./images/project_images/cabcs_study_images/IMG_8668.jpeg"
+                            alt="picture of man with a fnirs and eeg recording device">
+                    </a>
+                </div>
+                <div class="project-body">
+                    <h4>Distinguishing Default Mode Network from Task Positive Network</h4>
+                    <a href="research.html" class="learn-more">Learn More</a>
+                </div>
+
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <div class="badge">Current</div>
+                    <a href="research.html">
+                        <img src="./images/project_images/anes_photo.png"
+                            alt="picture of person with a fnirs and eeg recording device with VR goggles">
+                    </a>
+                </div>
+                <div class="project-body">
+                    <h4>Dynamically Adjusting VR Game Difficulty using combined fNIRS and EEG Data</h4>
+                    <a href="research.html" class="learn-more">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        © Rob Jacob. All rights reserved.
+    </footer>
 
 </body>
 
