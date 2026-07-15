@@ -33,7 +33,7 @@
 }
 
 body {
-    font-family: 'Satoshi-Regular';
+    font-family: 'Satoshi', sans-serif;
     color: #1a1a2e;
 }
 
@@ -45,6 +45,7 @@ body {
     background: #fff;
     border-bottom: 1px solid #f0f0f0;
     padding: 14px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .nav-links a {
@@ -162,9 +163,46 @@ body {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+/* ── EXPANDABLE BIO (mobile tap-to-read) ── */
+.toggle-row {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: -10px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #3B6AD1;
+}
+
+.toggle-row .chev {
+    display: inline-block;
+    font-size: 10px;
+    transition: transform 0.25s ease;
+}
+
+.expandable.is-open .toggle-row .chev {
+    transform: rotate(180deg);
+}
+
+.bio-wrap-inner {
+    overflow: hidden;
+}
+
 @media (max-width: 600px) {
+    body {
+        padding-top: 78px;
+    }
+
     .nav {
         gap: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 60;
     }
 
     .nav-logo {
@@ -221,6 +259,28 @@ body {
     .dropdown-menu a:hover {
         color: #1a1a2e !important;
     }
+
+    .expandable {
+        cursor: pointer;
+    }
+
+    .toggle-row {
+        display: flex;
+    }
+
+    .bio-wrap {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.28s ease;
+    }
+
+    .expandable.is-open .bio-wrap {
+        grid-template-rows: 1fr;
+    }
+
+    .bio-wrap-inner p {
+        margin-top: 20px;
+    }
 }
 
 .site-footer {
@@ -271,9 +331,32 @@ body {
     color: #6ACAF6;
 }
 
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 53px;
+    }
+
+    .section-label {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .section-sub {
+        font-size: 28px;
+        margin-top: 50px;
+        margin-bottom: 60px;
+    }
+}
+
 .section-intro {
     margin-top: 70px;
     font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .section-intro {
+        margin-top: 50px;
+    }
 }
 
 .btn-outline {

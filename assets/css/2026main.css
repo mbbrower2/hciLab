@@ -47,9 +47,10 @@
 
 .hero-content h1 {
     color: #ffffff;
-    font-family: 'Satoshi-Regular';
+    font-family: 'Satoshi', sans-serif;
     font-size: 1.8rem;
     font-weight: 400;
+    font-style: normal;
     line-height: 1.5;
     max-width: 500px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -57,7 +58,9 @@
 }
 
 .hero-content h1 em {
-    font-family: 'Satoshi-BoldItalic';
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 700;
+    font-style: italic;
     font-size: 1.8rem;
     display: block;
 }
@@ -234,12 +237,29 @@ nav {
 }
 
 @media (max-width: 600px) {
+    body {
+        padding-top: 0;
+    }
+
     nav {
         gap: 12px;
+        position: fixed;
+        z-index: 60;
+        background: #fff;
+        border-bottom: 1px solid #f0f0f0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     }
 
     .nav-logo {
         margin-right: 0;
+    }
+
+    .logo-text {
+        color: #1a1a2e;
+    }
+
+    .nav-toggle span {
+        background: #1a1a2e;
     }
 
     .nav-links {
@@ -369,7 +389,7 @@ nav {
   color: #fff;
   text-align: center;
   padding: 18px 20px;
-  font-family: 'Satoshi-Regular';
+  font-family: 'Satoshi', sans-serif;
   font-size: 0.8rem;
   letter-spacing: 0.04em;
 }

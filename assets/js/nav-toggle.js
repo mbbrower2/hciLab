@@ -19,5 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         links.querySelectorAll('a').forEach((link) => {
             link.addEventListener('click', closeMenu);
         });
+
+        document.addEventListener('click', (e) => {
+            if (!links.classList.contains('open')) return;
+            if (links.contains(e.target) || toggle.contains(e.target)) return;
+            closeMenu();
+        });
     });
 });

@@ -24,8 +24,14 @@
     border: none;
 }
 
+/* ── per-photo positioning ── */
+.photo-rob-jacob { object-position: center 0px; }
+.photo-anes-kim { object-position: center -10px; }
+.photo-peter-llamas { object-position: center -15px; }
+.photo-maya-salloway { object-position: center calc(50% + 60px); }
+
 .card-body {
-    font-family: 'Satoshi-Regular';
+    font-family: 'Satoshi', sans-serif;
     font-size: 19px;
     padding: 32px;
     display: flex;
@@ -138,6 +144,17 @@
     text-decoration: underline;
 }
 
+/* ── per-photo positioning ── */
+.photo-matt-russell { object-position: center -60px; }
+.photo-beste-filiz-yuksel { object-position: center -42px; }
+.photo-erin-solovey { object-position: center -67px; }
+.photo-dan-afergan { object-position: center -30px; }
+.photo-evan-peck { object-position: center -10px; }
+.photo-audrey-girouard { object-position: center -40px; }
+.photo-orit-shaer { object-position: center -20px; }
+.photo-georgios-christou { object-position: center -20px; }
+.photo-vildan-tanriverdi { object-position: center -33px; }
+
 #biggerSize {
     width: 270px !important;
     height: 480px;
@@ -147,4 +164,51 @@
     margin-top: 8px;
     font-size: 11px;
     font-weight: 100 !important;
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .card-icon {
+        width: 100%;
+        height: 350px;
+    }
+
+    .card-body {
+        margin: 0;
+        padding: 22px 20px 26px;
+        overflow: visible;
+    }
+
+    .card-body h3 {
+        text-align: center;
+    }
+
+    /* ── per-photo positioning (mobile) ── */
+    .photo-maddie-brower { object-position: center calc(50% + 20px); }
+    .photo-julia-santaniello { object-position: center calc(50% + 40px); }
+    .photo-phillip-li { object-position: center calc(50% + 50px); }
+    .photo-peter-llamas { object-position: center calc(50% + 60px); }
+    .photo-maya-salloway { object-position: center calc(50% + 130px); }
+
+    #biggerSize {
+        height: auto;
+    }
+
+    #biggerSize .toggle-row {
+        margin-top: 10px;
+    }
+
+    .mini-card-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .mini-card-container .mini-card {
+        width: 100%;
+    }
 }
