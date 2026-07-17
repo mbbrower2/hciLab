@@ -29,6 +29,7 @@
 .photo-anes-kim { object-position: center -10px; }
 .photo-peter-llamas { object-position: center -15px; }
 .photo-maya-salloway { object-position: center calc(50% + 60px); }
+.photo-julia-santaniello { transform: scale(1.1); object-position: center calc(50% + 10px);}
 
 .card-body {
     font-family: 'Satoshi', sans-serif;
