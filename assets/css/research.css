@@ -29,7 +29,13 @@
 .photo-workload-motion { object-position: center -95px; }
 .photo-interruption { object-position: center -75px; }
 .photo-task-difficulty { object-position: calc(50% + 71px) center; }
-.photo-dynamic-difficulty { object-position: center -70px; }
+.photo-dynamic-difficulty { object-position: center -68px; }
+
+@media (min-width: 601px) {
+    .photo-workload-motion { object-position: center 0px; }
+    .photo-interruption { object-position: center 0px; }
+    .photo-dynamic-difficulty { object-position: center 0px; }
+}
 
 .project-info {
     font-family: 'Satoshi', sans-serif;
@@ -87,5 +93,5 @@
 
     /* ── per-photo positioning (mobile) ── */
     .photo-dmn-tpn { object-position: center -100px; }
-    .photo-vr-difficulty { object-position: center -    0px; }
+    .photo-vr-difficulty { object-position: center 0px; }
 }
