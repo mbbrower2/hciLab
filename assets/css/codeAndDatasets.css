@@ -12,11 +12,21 @@ p {
 
 /* SITE SPECIFIC */
 
+.section-intro {
+    margin-bottom: 70px;
+}
+
 .quickLinks {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     min-height: 200px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.quickLinks .section-sub {
+    margin-top: 0;
 }
 
 .quick-links {

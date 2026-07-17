@@ -32,3 +32,8 @@
     color: inherit;
     text-decoration: underline;
 }
+
+#journalarticles,
+#otherpublications {
+    margin-top: 28px;
+}
