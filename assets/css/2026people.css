@@ -146,15 +146,16 @@
 }
 
 /* ── per-photo positioning ── */
-.photo-matt-russell { object-position: center -60px; }
-.photo-beste-filiz-yuksel { object-position: center -42px; }
-.photo-erin-solovey { object-position: center -67px; }
-.photo-dan-afergan { object-position: center -30px; }
-.photo-evan-peck { object-position: center -10px; }
-.photo-audrey-girouard { object-position: center -40px; }
-.photo-orit-shaer { object-position: center -20px; }
-.photo-georgios-christou { object-position: center -20px; }
-.photo-vildan-tanriverdi { object-position: center -33px; }
+.mini-card img.photo-matt-russell { object-position: center -60px; }
+.mini-card img.photo-beste-filiz-yuksel { object-position: center -47px; }
+.mini-card img.photo-erin-solovey { object-position: center -67px; }
+.mini-card img.photo-dan-afergan { object-position: center -30px; }
+.mini-card img.photo-evan-peck { object-position: center -10px; }
+.mini-card img.photo-audrey-girouard { object-position: center -40px; }
+.mini-card img.photo-orit-shaer { object-position: center -20px; }
+.mini-card img.photo-georgios-christou { object-position: center -20px; }
+.mini-card img.photo-vildan-tanriverdi { object-position: center -33px; }
+
 
 #biggerSize {
     width: 270px !important;
