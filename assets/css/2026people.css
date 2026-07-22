@@ -190,11 +190,11 @@
     }
 
     /* ── per-photo positioning (mobile) ── */
-    .photo-maddie-brower { object-position: center calc(50% + 20px); }
-    .photo-julia-santaniello { object-position: center calc(50% + 40px); }
-    .photo-phillip-li { object-position: center calc(50% + 50px); }
-    .photo-peter-llamas { object-position: center calc(50% + 60px); }
-    .photo-maya-salloway { object-position: center calc(50% + 130px); }
+    .photo-maddie-brower { object-position: center calc(50%px); }
+    .photo-julia-santaniello { object-position: center calc(50%px); }
+    .photo-phillip-li { object-position: center calc(50% + 10px); }
+    .photo-peter-llamas { object-position: center calc(50% + 20px); }
+    .photo-maya-salloway { object-position: center calc(50% + 60px); }
 
     #biggerSize {
         height: auto;
